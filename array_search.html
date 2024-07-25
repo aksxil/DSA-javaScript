@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array Search</title>
+    <script>
+        //  let data = [20,40,80,50,33,55];
+        //  let item = 40;
+        //  let index = undefined;
+        //  for(let i = 0; i<data.length-1;i++){
+        //    if(data[i]===item){
+        //      index=i
+        //      break;
+        //    }
+        //  }
+        //  console.log(index)
+        // data.splice(20,1)
+        // console.log(data)
+
+        function searchElement() {
+            let data = [20, 40, 80, 50, 33, 55];
+            let item = parseInt(document.getElementById("searchEl").value);
+            let index = -1; // Using -1 to indicate "not found"
+            for (let i = 0; i < data.length; i++) {
+                if (data[i] === item) {
+                    index = i;
+                    break;
+                }
+            }
+
+            // Display the result
+            let result = document.getElementById("result");
+            if (index !== -1) {
+                result.textContent = "Element found at index: " + index;
+            } else {
+                result.textContent = "Element not found";
+            }
+
+            console.log(index);
+        }
+        
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter value" id="searchEl">
+    <button onclick="searchElement()">Search Element</button>
+    <p id="result"></p> <!-- Added paragraph to display result -->
+
+</body>
+
+</html>
