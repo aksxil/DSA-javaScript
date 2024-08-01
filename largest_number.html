@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function largestNum(nums) {
+            nums = nums.map(String)
+            nums.sort((a, b) => (b + a) - (a + b))
+            let result = nums.join("");
+            return result[0] === '0' ? '0' : result;
+        }
+        let nums = [10, 2]
+        console.log(largestNum(nums))
+
+        // console.log(result)
+        // console.log(nums)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

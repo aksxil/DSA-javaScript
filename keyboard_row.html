@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let words = ["Hello", "Alaska", "Dad", "Peace"]
+
+        function findWords(words) {
+            const row1 = new Set('qwertyuiop');
+            const row2 = new Set('asdfghjkl');
+            const row3 = new Set('zxcvbnm');
+
+            function typesWithOneRow(word) {
+                const lowerword = word.toLowerCase()
+                const sets = [row1, row2, row3];
+                for (let row of sets) {
+                    if ([...lowerword].every(char => row.has(char))) {
+                        return true
+                    }
+                }
+                return false;
+            }
+            // Filter the words typed using one row
+            return words.filter(typesWithOneRow);
+        }
+        console.log(findWords(words))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
