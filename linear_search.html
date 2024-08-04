@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let data = [20,13,45,78,2,9,5,50]
+        let find = 0;
+        let pos = undefined;
+
+        for(let i = 0;i<data.length;i++){
+             if(data[i]==find){
+                pos=i;
+              break;  
+             }
+        }
+        
+       
+        if(!pos){
+            console.log("Element not found")
+        }
+        else{
+            console.log(pos)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
