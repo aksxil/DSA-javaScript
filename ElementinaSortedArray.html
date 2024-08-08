@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nums = [1, 1, 2, 3, 3, 4, 4, 8, 8]
+
+        function SingleDig(nums) {
+            let left = 0;
+            let right = nums.length - 1;
+            while (left < right) {
+                let mid = Math.floor((left + right) / 2)
+                if (mid % 2 === 1) {
+                    mid--
+                }
+                //check pairs ar avail
+                if (nums[mid] === nums[mid + 1]) {
+                    left = mid + 2;
+                }
+                else {
+                    right = mid;
+                }
+            }
+            return nums[left];
+        }
+        console.log(SingleDig(nums))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
