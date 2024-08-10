@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nums = [1, 3, 4, 2, 2];
+        function findDup(nums) {
+            nums.sort()
+            for (let i = 0; i < nums.length; i++) {
+                if (nums[i + 1] == nums[i]) {
+                    return nums[i]
+                }
+            }
+            return -1
+        }
+        console.log(findDup(nums))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

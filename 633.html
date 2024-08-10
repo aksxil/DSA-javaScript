@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function judgeSquareSum(c){
+          let a = 0;
+          let b = Math.floor(Math.sqrt(c));
+          while(a<=b){
+            let sum = a*a+b*b;
+            if(sum===c){
+                return true; 
+            }
+            else if(sum<c){
+                a++
+            }
+            else{
+                b--
+            }
+          }
+          return false;
+        }
+        console.log(judgeSquareSum(10)); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
